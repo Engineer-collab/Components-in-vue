@@ -9,6 +9,8 @@
         :role="member.role"
       ></user-item>
     </ul>
+    
+    <router-link to="/teams/t2">Go to team 2</router-link>
   </section>
 </template>
 
@@ -25,9 +27,9 @@ export default {
       teamName:'',
       members:[]
     };
-  },
-  created(){
-     const teamId = this.$route.params.apniTeam;
+  },methods:{
+    loadMyComponent(route){
+      const teamId = route.params.apniTeam;
      const selectedTeam = this.teams.find(team=> team.id === teamId);
      const members = selectedTeam.members;
      const selectedMembers = [];
@@ -37,7 +39,17 @@ export default {
      }
      this.members = selectedMembers
 
+    }
+  },
+  created(){
+  this.loadMyComponent(this.$route)
+
+  },
+  watch:{
+    $route(myRoute){
+  this.loadMyComponent(myRoute)
   }
+}
 };
 </script>
 

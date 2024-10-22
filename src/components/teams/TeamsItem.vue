@@ -11,7 +11,6 @@ export default {
   props: ['id','name', 'memberCount'],
   computed:{
     teamLinkView(){
-       console.log(this.teamLinkView)
      return '/teams/' + this.id;
     }
   }
