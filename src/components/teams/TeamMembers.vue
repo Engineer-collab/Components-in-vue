@@ -19,6 +19,7 @@ import UserItem from '../users/UserItem.vue';
 
 export default {
   inject:['users','teams'],
+  props:['apniTeam'],
   components: {
     UserItem
   },
@@ -28,8 +29,8 @@ export default {
       members:[]
     };
   },methods:{
-    loadMyComponent(route){
-      const teamId = route.params.apniTeam;
+    loadMyComponent(apniTeam){
+      const teamId = apniTeam;
      const selectedTeam = this.teams.find(team=> team.id === teamId);
      const members = selectedTeam.members;
      const selectedMembers = [];
@@ -42,12 +43,12 @@ export default {
     }
   },
   created(){
-  this.loadMyComponent(this.$route)
+  this.loadMyComponent(this.apniTeam)
 
   },
   watch:{
-    $route(myRoute){
-  this.loadMyComponent(myRoute)
+    apniTeam(meriTeam){
+  this.loadMyComponent(meriTeam)
   }
 }
 };
