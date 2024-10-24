@@ -44,6 +44,7 @@ export default {
   },
   created(){
   this.loadMyComponent(this.apniTeam)
+  console.log(this.$route.query)
 
   },
   watch:{

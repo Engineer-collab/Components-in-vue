@@ -13,7 +13,7 @@ export default {
   computed:{
     teamLinkView(){
     //  return '/teams/' + this.id;
-    return { name:'team-members' , params :{ apniTeam:this.id}}
+    return { name:'team-members' , params :{ apniTeam:this.id},query:{sort:'asc'}}
     }
   }
 };
