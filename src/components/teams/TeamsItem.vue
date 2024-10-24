@@ -7,11 +7,13 @@
 </template>
 
 <script>
+
 export default {
   props: ['id','name', 'memberCount'],
   computed:{
     teamLinkView(){
-     return '/teams/' + this.id;
+    //  return '/teams/' + this.id;
+    return { name:'team-members' , params :{ apniTeam:this.id}}
     }
   }
 };

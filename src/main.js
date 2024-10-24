@@ -11,9 +11,9 @@ const router = createRouter({
     history:createWebHistory(),
     routes : [
         // {path:'/',redirect:'/teams'},
-        {path:'/teams',component:TeamsList,alias:'/',children:[
+        {name:'team',path:'/teams',component:TeamsList,alias:'/',children:[
        
-            {path:':apniTeam',component:TeamMembers,props:true},
+            {name : 'team-members' ,path:':apniTeam',component:TeamMembers,props:true},
         ]},
         {path:'/users',component:UsersList},
         
