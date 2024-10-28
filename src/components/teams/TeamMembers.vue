@@ -47,6 +47,12 @@ export default {
   console.log(this.$route.query)
 
   },
+  beforeRouteUpdate(to,from,next){
+    // this.loadMyComponent(to.params.apniTeam)
+    console.log('before route update')
+    console.log(to,from)
+    next();
+  },
   watch:{
     apniTeam(meriTeam){
   this.loadMyComponent(meriTeam)

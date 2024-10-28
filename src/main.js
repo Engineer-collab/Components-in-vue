@@ -17,7 +17,14 @@ const router = createRouter({
        
             {name : 'team-members' ,path:':apniTeam',component:TeamMembers,props:true},
         ]},
-        {path:'/users',components:{default:UsersList,footer:UsersFooter}},
+        {path:'/users',components:{default:UsersList,footer:UsersFooter},
+    beforeEnter(to,from,next){
+        console.log('User before enter')
+        console.log(to,from)
+        next()
+    }
+    },
+
         
         {path:'/:notFound(.*)',component:NotFound},
         
@@ -32,6 +39,7 @@ const router = createRouter({
     }
 })
 router.beforeEach(function(to,from,next) {
+    console.log('before Each Guard')
     console.log(to,from)
     next()  ;  
 })

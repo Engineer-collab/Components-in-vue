@@ -19,6 +19,12 @@ export default {
     Input(){
       this.$router.push('/teams')
     }
+    ,
+    beforeRouteEnter(to,from,next){
+  console.log(to,from)
+  console.log('before route enter')
+  next();
+    }
   },
   inject: ['users'],
 };
