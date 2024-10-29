@@ -43,6 +43,10 @@ router.beforeEach(function(to,from,next) {
     console.log(to,from)
     next()  ;  
 })
+router.afterEach(function(to,from) {
+console.log('after each guard')    
+console.log(to,from)    
+})
 
 
 const app = createApp(App)
