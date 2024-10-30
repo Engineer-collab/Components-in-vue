@@ -1,11 +1,16 @@
 <template>
   <ul>
-  <button @click="Input">Confirm</button>
-</ul>
-  <ul>
-    <user-item v-for="user in users" :key="user.id" :name="user.fullName" :role="user.role"></user-item>
+    <button @click="Input">Confirm</button>
+    <button @click="SavedChanges">Saved Changes</button>
   </ul>
-  
+  <ul>
+    <user-item
+      v-for="user in users"
+      :key="user.id"
+      :name="user.fullName"
+      :role="user.role"
+    ></user-item>
+  </ul>
 </template>
 
 <script>
@@ -15,18 +20,44 @@ export default {
   components: {
     UserItem,
   },
-  methods:{
-    Input(){
-      this.$router.push('/teams')
-    }
-    ,
-    beforeRouteEnter(to,from,next){
-  console.log(to,from)
-  console.log('before route enter')
-  next();
-    }
+  data() {
+    return {
+      saved: false,
+    };
+  },
+  methods: {
+    SavedChanges() {
+      console.log(this.saved)
+      this.saved = true;
+      console.log(this.saved)
+    },
+    Input() {
+      this.$router.push('/teams');
+    },
+    
   },
   inject: ['users'],
+  beforeRouteEnter(to, from, next) {
+      console.log(to, from);
+      console.log('before route enter at userlist.vue');
+      next();
+    },
+    beforeRouteLeave(to, from, next) {
+      console.log('Before route leave guard userlist.vue');
+      console.log(to, from);
+      if (this.saved) {
+        next();
+      } 
+      else {
+        const barak = window.confirm(
+          'Do you really want to leave? you have unsaved changes!'
+        );
+        next(barak);
+      }
+    },
+    unmounted() {
+      console.log('unmounted');
+    },
 };
 </script>
 

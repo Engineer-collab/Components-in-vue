@@ -39,12 +39,12 @@ const router = createRouter({
     }
 })
 router.beforeEach(function(to,from,next) {
-    console.log('before Each Guard')
+    console.log('before Each Guard at main.js')
     console.log(to,from)
     next()  ;  
 })
 router.afterEach(function(to,from) {
-console.log('after each guard')    
+console.log('after each guard at main.js')    
 console.log(to,from)    
 })
 
