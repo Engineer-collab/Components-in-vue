@@ -2,7 +2,7 @@
 
 Now, that's it for the Vue router.
 
-You’ve learned a lot in this module:
+You’ve learned a lot in this repo:
 
 - **Why we need routing** and how to set up routing.
 - How to **register routes** and the various configuration options available:
@@ -24,7 +24,7 @@ With these skills, you can:
 - Ensure URLs are meaningful and **sharable**, relating to on-screen content.
 - Support **single-page application (SPA)** navigation while making the app shareable and bookmarkable.
 
-These are the fundamentals we’ve covered here. Revisit this module if anything feels unclear, or as a refresher in a few weeks. The Vue router is essential for any larger application you’ll build.
+These are the fundamentals we’ve covered here. Revisit this repo if anything feels unclear, or as a refresher in a few weeks. The Vue router is essential for any larger application you’ll build.
 
 And speaking of larger applications, we’ll soon dive into building one, where we’ll apply all of these concepts and see the Vue router in action in a realistic, robust project.
 
