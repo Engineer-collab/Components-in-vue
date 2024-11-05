@@ -1,7 +1,33 @@
-#Components in VUE
-*Now, that's it for the Vue router.
+# Components in Vue
 
-You learned why we need routing and how to set up routing,you learned how to register routes,that there is a lot you can configure there.You can set up re-directs, paths, names, metadata,multiple components that should be loaded,nested routes with children.We learned how to work with dynamic path segments,to use route parameters,which we can extract in the loaded components,how we can pass those route parameters as props into the to-be-loaded components.And, much more.We learned about all those navigation guards,and about controlling the scroll behavior. We learned how to navigate with router-link or also, programmatically with the $router property and the push method.We learned how we can describe the location we want to go to, for example, by setting up a string path to which we want to go, or by passing such an object using the name, adding params and possibly adding a query parameter.With all of that, you can provide a great user experience,you can make sure that users don't lose unsaved changes,you can make sure that you have URL's and paths in the URL's that relate to the content that's visible on the screen,and you got sharable URL's, which you can copy and paste to load exactly that place off your Vue application,even though it's still a single page application.These are all the things you learned here,and I can absolutely recommend that you go through this module again if some things aren't clear,or maybe in a couple of weeks,so that you make sure you don't forget all those things which you learned here.Because, you will need the Vue router in any bigger application you are going to build.And, speaking of that, we are going to buildsuch a bigger application,so that we can practice all the things we learned . thus far and also see the router in action, in a more realistic application.
+Now, that's it for the Vue router.
+
+You’ve learned a lot in this module:
+
+- **Why we need routing** and how to set up routing.
+- How to **register routes** and the various configuration options available:
+  - Setting up **redirects**, paths, names, metadata.
+  - Loading **multiple components**.
+  - **Nested routes** with child components.
+- Working with **dynamic path segments** and **route parameters**:
+  - Extracting route parameters in loaded components.
+  - Passing route parameters as **props** to components.
+- Exploring **navigation guards** and controlling **scroll behavior**.
+- Navigating with **router-link** or programmatically with the `$router` property and `push` method.
+- Defining locations by:
+  - **String paths** or objects with names.
+  - Adding **params** and **query parameters**.
+
+With these skills, you can:
+
+- Enhance the user experience by preserving **unsaved changes**.
+- Ensure URLs are meaningful and **sharable**, relating to on-screen content.
+- Support **single-page application (SPA)** navigation while making the app shareable and bookmarkable.
+
+These are the fundamentals we’ve covered here. Revisit this module if anything feels unclear, or as a refresher in a few weeks. The Vue router is essential for any larger application you’ll build.
+
+And speaking of larger applications, we’ll soon dive into building one, where we’ll apply all of these concepts and see the Vue router in action in a realistic, robust project.
+
 
 
 
